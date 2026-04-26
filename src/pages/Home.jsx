@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const tools = [
   {
     name: '구름 (Cloud)',
-    description: '딜레마와 갈등을 해결하고 모두가 윈윈(Win-Win)하는 창의적 해결책을 찾는 도구입니다.',
+    description: '갈등과 딜레마를 해결하고 모두가 윈윈(Win-Win)하는 창의적 해결책을 찾는 도구입니다.',
     icon: <Cloud className="w-8 h-8 text-indigo-500" />,
     path: '/cloud',
     color: 'bg-indigo-50 border-indigo-100 hover:border-indigo-300',
@@ -21,7 +21,7 @@ const tools = [
   },
   {
     name: '야심찬 목표나무 (Ambitious Target Tree)',
-    description: '크고 야심찬 목표를 달성하는 과정을 시각화하고 예상되는 장애물을 극복하는 도구입니다.',
+    description: '야심찬 목표를 달성하는 과정을 시각화하고 예상되는 걸림돌을 극복하여 목표달성을 돕는 도구입니다.',
     icon: <Target className="w-8 h-8 text-rose-500" />,
     path: '/target-tree',
     color: 'bg-rose-50 border-rose-100 hover:border-rose-300',
@@ -135,7 +135,7 @@ export default function Home() {
             >
               <h3 className="text-2xl font-bold text-slate-900 mb-4">6개 대륙, 24개국 이상 도입</h3>
               <p className="text-slate-600 leading-relaxed mb-8">
-                호주, 영국, 미국, 대한민국, 일본, 이스라엘 등 전 세계 다양한 문화와 교육 현장에서 TOCfE가 적용되어 놀라운 성과를 증명하고 있습니다.
+                호주, 영국, 미국, 대한민국, 일본, 이스라엘 등 전 세계 다양한 문화와 교육 현장에서 TOCfE 생각도구가 적용되어 놀라운 성과를 증명하고 있습니다.
               </p>
               <ul className="space-y-6">
                 <li className="flex items-start">
