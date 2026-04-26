@@ -20,7 +20,7 @@ export default function Books() {
             transition={{ delay: 0.1 }}
             className="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed"
           >
-            TOCfE와 논리적 사고력을 기를 수 있는 추천 도서와 현장 교재를 소개합니다.
+            TOCfE 생각도구와 논리적 사고력을 기를 수 있는 추천 도서와 교구를 소개합니다.
           </motion.p>
         </div>
       </section>
