@@ -92,8 +92,8 @@ export default function Layout() {
 
       <footer className="bg-white border-t border-slate-200 py-8 mt-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-500 text-sm">
-          <p>© {new Date().getFullYear()} TOCfE 생각도구 소개. 모든 권리 보유.</p>
-          <p className="mt-2 text-xs">본 사이트는 TOCfE의 교육 목적을 돕기 위해 구성되었습니다.</p>
+          <p>© {new Date().getFullYear()} TOCfE All rights reserved.</p>
+          <p className="mt-2 text-xs">본 사이트는 TOCfE 생각도구 소개와 교육을 위해 구성되었습니다.</p>
         </div>
       </footer>
     </div>
