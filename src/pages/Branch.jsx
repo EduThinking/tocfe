@@ -66,7 +66,7 @@ export default function Branch() {
               </div>
               
               <p className="mt-8 text-sm text-slate-500 text-center bg-white py-2 px-4 rounded-full border border-slate-100">
-                원인을 아래에, 결과를 위에 화살표로 연결합니다.
+                원인을 아래에, 결과를 위에 적고 원인과 결과 사이를 화살표로 연결합니다.
               </p>
             </div>
 
