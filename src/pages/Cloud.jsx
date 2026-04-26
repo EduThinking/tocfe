@@ -40,7 +40,7 @@ export default function Cloud() {
             구름은 언제 사용하나요?
           </h2>
           <p className="text-slate-600 leading-relaxed text-lg mb-8">
-            우리는 종종 "이것을 해야 하나, 말아야 하나?" 또는 "내 의견을 따를까, 친구의 의견을 따를까?" 같은 갈등이나 딜레마에 빠집니다. 구름(Cloud)은 <strong>타협하지 않고도 양쪽의 요구를 모두 만족시킬 수 있는 창의적인 해결책(Win-Win)</strong>을 찾도록 도와주는 논리적 도구입니다.
+            우리는 종종 "이것을 해야 하나, 말아야 하나?" 딜레마에 빠지거나나 다른 사람과 의견이 대립되어 갈등하게 됩니다. 구름(Cloud)은 <strong>타협하지 않고도 양쪽의 요구를 모두 만족시킬 수 있는 창의적인 해결책(Win-Win)</strong>을 찾도록 도와주는 논리적 도구입니다.
           </p>
 
           <h2 className="text-2xl font-bold text-slate-900 mb-8 mt-12 flex items-center">
