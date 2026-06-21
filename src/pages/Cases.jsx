@@ -8,6 +8,7 @@ import { ref, uploadBytesResumable, getDownloadURL, deleteObject } from 'firebas
 export default function Cases() {
   const [files, setFiles] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null); // 에러 상태 추가
   
   // 관리자 인증 상태 (sessionStorage를 이용하여 탭 유지)
   const [isAdmin, setIsAdmin] = useState(() => {
@@ -33,9 +34,11 @@ export default function Cases() {
         docs.push({ id: doc.id, ...doc.data() });
       });
       setFiles(docs);
+      setError(null);
       setLoading(false);
-    }, (error) => {
-      console.error("Error fetching files: ", error);
+    }, (err) => {
+      console.error("Error fetching files: ", err);
+      setError(err.message || String(err)); // 에러 메시지 기록
       setLoading(false);
     });
     return () => unsubscribe();
@@ -423,6 +426,15 @@ export default function Cases() {
                 <Loader2 className="w-10 h-10 animate-spin text-indigo-600 mb-3" />
                 <span className="text-sm font-medium">네트워크에서 자료 목록을 동기화하고 있습니다...</span>
               </div>
+            ) : error ? (
+              <div className="text-center py-20 text-red-500 bg-red-50 rounded-xl border border-dashed border-red-200 mx-6 my-6">
+                <X className="w-12 h-12 text-red-400 mx-auto mb-3" />
+                <p className="text-base font-semibold">데이터를 불러오는 중 오류가 발생했습니다.</p>
+                <p className="text-sm text-red-400 mt-1">{error}</p>
+                <p className="text-xs text-slate-500 mt-4">
+                  * Firebase Console의 규칙(Rules) 탭에서 allow read, write: if true; 로 설정되어 있고 게시(Publish)가 완료되었는지 확인해 주세요.
+                </p>
+              </div>
             ) : files.length === 0 ? (
               <div className="text-center py-20 text-slate-500">
                 <FileText className="w-12 h-12 text-slate-300 mx-auto mb-3" />
@@ -526,7 +538,7 @@ export default function Cases() {
                     placeholder="비밀번호를 입력하세요"
                     required
                     autoFocus
-                    className="w-full px-4 py-2 border border-slate-350 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-550 bg-white text-slate-800"
+                    className="w-full px-4 py-2 border border-slate-350 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white text-slate-800"
                   />
                 </div>
                 
