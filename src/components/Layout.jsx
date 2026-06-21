@@ -96,6 +96,25 @@ export default function Layout() {
           <p className="mt-2 text-xs">본 사이트는 TOCfE의 교육 목적을 돕기 위해 구성되었습니다.</p>
         </div>
       </footer>
+
+      {/* 카카오톡 1:1 문의 플로팅 버튼 */}
+      <a
+        href="https://open.kakao.com/me/joeunyeong"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#FEE500] hover:bg-[#FDD000] text-[#191919] font-extrabold px-4 py-3 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgb(253,208,0,0.4)] transition-all duration-300 group hover:-translate-y-1"
+        title="카카오톡 1:1 문의"
+      >
+        <svg 
+          className="w-5 h-5 fill-current" 
+          viewBox="0 0 24 24"
+        >
+          <path d="M12 3c-4.97 0-9 3.185-9 7.115 0 2.52 1.66 4.73 4.18 5.92-.18.66-.65 2.37-.74 2.73-.12.47.17.46.36.33.15-.1 2.36-1.6 3.28-2.22.61.08 1.25.13 1.92.13 4.97 0 9-3.185 9-7.115S16.97 3 12 3z"/>
+        </svg>
+        <span className="text-sm tracking-tight max-w-0 overflow-hidden group-hover:max-w-[100px] transition-all duration-350 ease-in-out whitespace-nowrap">
+          카톡 문의
+        </span>
+      </a>
     </div>
   );
 }
